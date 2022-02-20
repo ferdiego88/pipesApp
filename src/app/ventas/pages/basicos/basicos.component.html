@@ -44,6 +44,15 @@
                 <li>fecha | date</li>
                 <li>fecha | date:'short'</li>
                 <li>fecha | date:'long'</li>
+                <li>fecha | date:'W dd MMMM YYYY hh:mm:ss a'</li>
+
+            </ul>
+            <hr>
+            <ul>
+                <li> fecha | date:'long':'GMT-6'</li>
+                <li> fecha | date:'long':'GMT-4'</li>
+                <li> fecha | date:'long':'':'en'</li>
+                <li> fecha | date:'long':'':'fr'</li>
             </ul>
         </p-card>
     </div>
@@ -53,7 +62,15 @@
                 <li> {{fecha}}</li>
                 <li> {{fecha | date}}</li>
                 <li> {{fecha | date:'short'}}</li>
+                <li> {{fecha | date:'long'}}</li>
                 <li> Semana {{fecha | date:'W dd MMMM YYYY hh:mm:ss a'}}</li>
+            </ul>
+            <hr>
+            <ul>
+                <li> {{fecha | date:'long':'GMT-6'}}</li>
+                <li> {{fecha | date:'long':'GMT-4'}}</li>
+                <li> {{fecha | date:'long':'':'en'}}</li>
+                <li> {{fecha | date:'long':'':'fr'}}</li>
             </ul>
         </p-card>
     </div>
