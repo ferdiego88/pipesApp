@@ -10,5 +10,5 @@ export class BasicosComponent  {
   nombreLower = 'Fernando';
   nombreUpper = 'FERNANDO';
   nombreFake = 'fErNaNdO SAnTIllAn'
-
+  fecha: Date = new Date(); // El dia de Hoy
 }
