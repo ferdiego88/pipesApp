@@ -14,12 +14,12 @@ export class NoComunesComponent {
   nombre2 = 'Susana';
   genero2 = 'femenino';
  
-  clientesArray = [{nombre:'Juan', genero:'masculino'},
-                  {nombre:'Diana', genero:'femenino'},
-                  {nombre:'Pablo', genero:'masculino'},
-                  {nombre:'Alfredo', genero:'masculino'},
-                  {nombre:'Rosario', genero:'femenino'},
-                  {nombre:'Khalessi', genero:'femenino'}
+  clientesArray = [{nombre:'Juan', genero:'masculino',edad:45},
+                  {nombre:'Diana', genero:'femenino', edad: 25},
+                  {nombre:'Pablo', genero:'masculino', edad: 19},
+                  {nombre:'Alfredo', genero:'masculino', edad: 22},
+                  {nombre:'Rosario', genero:'femenino', edad: 38},
+                  {nombre:'Khalessi', genero:'femenino', edad: 51}
                   ]
   invitacionMap = {
     'masculino': 'invitarlo',
@@ -28,7 +28,7 @@ export class NoComunesComponent {
 
 
   //i18nPlural
-  clientes: string [] = ['Maria','Pedro','Juan'];
+  clientes: string [] = ['Maria','Pedro','Juan', 'Fernando', 'Selena', 'Patricio'];
   clientesMap = {
     '=0': 'no tenemos ningún cliente esperando.',
     '=1': 'tenemos 1 cliente esperando.',
@@ -48,5 +48,7 @@ export class NoComunesComponent {
 
   borrarCliente(){
     this.clientesArray.pop();
+    this.clientes.pop();
   }
+
 }
