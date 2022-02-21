@@ -38,6 +38,9 @@ export class NoComunesComponent {
 
   cambiarCliente(){
     //Elige un cliente al azar del arreglo
+    if (!(this.clientesArray.length>0)) {
+       return;
+    }
     const clienteSeleccionado = (Math.floor(Math.random()*(this.clientesArray.length)+0));
     this.nombre2 = this.clientesArray[clienteSeleccionado].nombre;
     this.genero2 = this.clientesArray[clienteSeleccionado].genero;
