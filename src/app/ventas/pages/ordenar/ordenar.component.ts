@@ -42,7 +42,12 @@ export class OrdenarComponent  {
     }
   ];
   enMayusculas = false;
+  ordenarPor = '';
   constructor() { }
 
+
+  cambiarOrden (valor: string) {
+    this.ordenarPor = valor;
+  }
 
 }

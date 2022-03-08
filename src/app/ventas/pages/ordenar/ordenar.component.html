@@ -11,14 +11,19 @@
         <button pButton type="button" label="toogle Mayúsculas" class="mr-1 p-button-warning"
         (click)="enMayusculas=!enMayusculas">
         </button>
-        <button pButton icon="pi pi-sort" label="Por nombre" class="mr-1 p-button-primary"></button>
-        <button pButton icon="pi pi-sort" label="Vuela" class="mr-1 p-button-success"></button>
-        <button pButton icon="pi pi-sort" label="Por color" class="mr-1 p-button-help"></button>
+        <button pButton icon="pi pi-sort" label="Por nombre" 
+                class="mr-1 p-button-primary"
+                (click)="cambiarOrden('nombre')"></button>
+        <button pButton icon="pi pi-sort" label="Vuela" 
+                class="mr-1 p-button-success"
+                (click)="cambiarOrden('vuela')"></button>
+        <button pButton icon="pi pi-sort" label="Por color" class="mr-1 p-button-help"
+                (click)="cambiarOrden('color')"></button>
     </div>
 </p-toolbar>
 <div class="p-grid">
     <div class="col mt-2">
-        <p-table [value]="heroes |ordenar " responsiveLayout="scroll">
+        <p-table [value]="heroes |ordenar:ordenarPor" responsiveLayout="scroll">
             <ng-template pTemplate="header">
                 <tr>
                     <th>Nombre</th>
